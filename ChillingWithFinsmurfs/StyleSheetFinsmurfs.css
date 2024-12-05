@@ -42,15 +42,13 @@ p, ul, ol {
 /* Gallery Styling */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
     padding: 20px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+.grid-item {
+    text-align: center;
 }
 
 .grid-item img {
@@ -80,19 +78,18 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-/* Responsive Design */
-@media (max-width: 100px) {
+@media (max-width: 768px) {
     nav {
         display: flex;
         flex-direction: column;
+        text-align: center; 
     }
 
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
     .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 }
