@@ -7,11 +7,11 @@ body {
     color: #333;
 }
 
-/* Navigation Bar */
 nav {
     background-color: #333;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 nav a {
@@ -20,76 +20,96 @@ nav a {
     margin: 0 15px;
     padding: 8px 12px;
     border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 nav a:hover {
     background-color: #575757;
 }
 
-/* Header */
-h1, h2, h3 {
-    color: #4CAF50;
+header {
     text-align: center;
-    margin-top: 20px;
+    padding: 20px;
 }
 
-/* Paragraph Styling */
-p, ul, ol {
+header h1 {
+    color: #4CAF50;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    color: #333;
+    margin-top: 10px;
+    font-size: 1.8rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+h3, h4, h5 {
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 30px;
+}
+
+p {
     margin: 20px;
     padding: 0;
 }
 
-/* Gallery Styling */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 20px;
-}
-
-.grid-item {
-    text-align: center;
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-}
-
-/* List Styling */
 ul, ol {
     margin: 20px;
     padding: 0 20px;
+    list-style-position: inside;
 }
 
 ul li, ol li {
     margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
 @media (max-width: 768px) {
     nav {
-        display: flex;
         flex-direction: column;
-        text-align: center; 
     }
 
-    .grid-container {
-        grid-template-columns: 1fr; 
+    nav a {
+        margin: 5px 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
     }
 
     .gallery {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
