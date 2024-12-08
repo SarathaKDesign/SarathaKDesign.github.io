@@ -31,23 +31,24 @@ nav a:hover {
 header {
     text-align: center;
     padding: 20px;
-    background-color: white; /* Change the background color to white */
+    background-color: white; /* Background color for header */
 }
 
 header h1 {
-    color: #333; /* Change header text color to dark for better contrast on white */
+    color: #003366; /* Dark blue color for header h1 */
     font-size: 2.5rem;
     font-family: inherit;
 }
 
 header h2 {
-    color: #333; /* Change subheading text color to dark */
+    color: #003366; /* Dark blue color for header h2 */
     margin-top: 10px;
     font-size: 1.8rem;
     font-family: inherit;
 }
 
 header p {
+    color: #FFD700; /* Yellow color for header paragraph */
     font-size: 1.2rem;
     margin-top: 15px;
     font-family: inherit;
@@ -127,4 +128,3 @@ footer {
     .grid-item img {
         height: 200px;  /* Maintain the same height for images on mobile */
     }
-}
