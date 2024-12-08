@@ -1,5 +1,5 @@
 body {
-    font-family: Calibri, Arial, sans-serif; 
+    font-family: Calibri, Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -80,7 +80,7 @@ ul li, ol li {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min width for better fitting */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min width for better fitting */
     gap: 15px;
     padding: 20px;
     max-width: 100%;
@@ -89,7 +89,7 @@ ul li, ol li {
 .grid-item img {
     width: 100%;
     height: 180px;  /* Reduced height for smaller images */
-    object-fit: cover; /* Ensure the image fits nicely without stretching */
+    object-fit: contain; /* Ensures the entire image is visible without cutting off */
     border-radius: 8px;
     border: 2px solid #ddd;
     margin: 0 auto;
