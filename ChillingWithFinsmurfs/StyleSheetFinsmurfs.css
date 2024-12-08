@@ -31,7 +31,7 @@ nav a:hover {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0000CD; /* Blue color for header */
+    background-color: #333; /* Blue color for header */
 }
 
 header h1 {
