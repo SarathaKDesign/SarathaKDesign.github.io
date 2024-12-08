@@ -31,17 +31,17 @@ nav a:hover {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333; /* Blue color for header */
+    background-color: white; /* Change the background color to white */
 }
 
 header h1 {
-    color: white; /* Change header text color to white */
+    color: #333; /* Change header text color to dark for better contrast on white */
     font-size: 2.5rem;
     font-family: inherit;
 }
 
 header h2 {
-    color: #fff; /* Change subheading text color to white */
+    color: #333; /* Change subheading text color to dark */
     margin-top: 10px;
     font-size: 1.8rem;
     font-family: inherit;
@@ -127,3 +127,4 @@ footer {
     .grid-item img {
         height: 200px;  /* Maintain the same height for images on mobile */
     }
+}
