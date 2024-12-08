@@ -1,18 +1,12 @@
-* {
+body {
+    font-family: Calibri, Arial, sans-serif; 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and Global Styles */
-body {
-    font-family: Calibri, Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
 }
 
-/* Navigation Bar */
 nav {
     background-color: #333;
     display: flex;
@@ -27,65 +21,97 @@ nav a {
     padding: 8px 12px;
     border-radius: 4px;
     transition: background-color 0.3s ease-in-out;
+    font-family: inherit; 
 }
 
 nav a:hover {
     background-color: #575757;
 }
 
-/* Header */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0000CD; /* Blue header */
-    color: white;
+    background-color: #0000CD; /* Blue color for header */
 }
 
 header h1 {
+    color: white; /* Change header text color to white */
     font-size: 2.5rem;
+    font-family: inherit;
 }
 
 header h2 {
-    font-size: 1.8rem;
+    color: #fff; /* Change subheading text color to white */
     margin-top: 10px;
+    font-size: 1.8rem;
+    font-family: inherit;
 }
 
 header p {
     font-size: 1.2rem;
     margin-top: 15px;
+    font-family: inherit;
 }
 
-/* Sections */
-section {
-    margin: 20px;
-    padding: 20px;
-}
-
-h3 {
-    color: #4CAF50; /* Green color for headings */
+h3, h4, h5 {
+    color: #4CAF50;
     text-align: center;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    font-family: inherit;
+}
+
+p {
+    margin: 20px;
+    padding: 0;
+    font-family: inherit;
 }
 
 ul, ol {
-    margin-left: 20px;
+    margin: 20px;
+    padding: 0 20px;
+    list-style-position: inside;
 }
 
 ul li, ol li {
     margin-bottom: 10px;
+    font-family: inherit;
 }
 
-/* Footer */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;  /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensure the image fits nicely without stretching */
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    margin: 0 auto;
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    font-family: inherit;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -94,20 +120,10 @@ footer {
         font-size: 1.5rem;
     }
 
-    nav {
-        flex-direction: column;
-        text-align: center;
+    .gallery {
+        grid-template-columns: 1fr;
     }
 
-    nav a {
-        margin: 5px 0;
+    .grid-item img {
+        height: 200px;  /* Maintain the same height for images on mobile */
     }
-
-    section {
-        padding: 10px;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-}
