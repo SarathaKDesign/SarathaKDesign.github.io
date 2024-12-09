@@ -3,29 +3,10 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f4f4f9;
     color: #333;
-    position: relative;
 }
 
-/* Apply background image only to the index page */
-.index-page {
-    background: url('background_image.jpeg') no-repeat center center;
-    background-size: contain; /* Ensures the full image is visible */
-    background-attachment: fixed; /* Keeps the image fixed while scrolling */
-}
-
-.index-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
-    z-index: -1; /* Ensures the overlay stays behind all content */
-}
-
-/* Navigation Bar */
 nav {
     background-color: #333;
     display: flex;
@@ -40,75 +21,80 @@ nav a {
     padding: 8px 12px;
     border-radius: 4px;
     transition: background-color 0.3s ease-in-out;
-    font-family: inherit;
+    font-family: inherit; 
 }
 
 nav a:hover {
     background-color: #575757;
 }
 
-/* Header Styles */
 header {
     text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 8px;
-    margin: 20px;
+    background-color: white; /* Background color for header */
 }
 
 header h1 {
-    color: #003366; /* Dark blue color */
+    color: #003366; /* Dark blue color for header h1 */
     font-size: 2.5rem;
     font-family: inherit;
 }
 
 header h2 {
-    color: #003366; /* Dark blue color */
+    color: #003366; /* Dark blue color for header h2 */
     margin-top: 10px;
     font-size: 1.8rem;
     font-family: inherit;
 }
 
 header p {
-    color: #FFD700; /* Yellow color */
+    color: #FFD700; /* Yellow color for header paragraph */
     font-size: 1.2rem;
     margin-top: 15px;
     font-family: inherit;
 }
 
-/* Section Styles */
-section {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px;
-    text-align: center;
-}
-
 h3, h4, h5 {
     color: #4CAF50;
+    text-align: center;
     margin-top: 30px;
     font-family: inherit;
 }
 
-/* Paragraphs */
 p {
     margin: 20px;
+    padding: 0;
     font-family: inherit;
 }
 
-/* List Styles */
 ul, ol {
     margin: 20px;
-    padding-left: 40px; /* Adds left padding to align bullets properly */
-    list-style-position: outside; /* Bullets outside text block */
+    padding: 0 20px;
+    list-style-position: inside;
 }
 
 ul li, ol li {
     margin-bottom: 10px;
+    font-family: inherit;
 }
 
-/* Footer */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min width for better fitting */
+    gap: 15px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 180px;  /* Reduced height for smaller images */
+    object-fit: contain; /* Ensures the entire image is visible without cutting off */
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    margin: 0 auto;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -118,7 +104,6 @@ footer {
     font-family: inherit;
 }
 
-/* Media Query for Small Screens */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -136,7 +121,11 @@ footer {
         font-size: 1.5rem;
     }
 
-    ul, ol {
-        padding-left: 20px; /* Adjust padding for smaller screens */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item img {
+        height: 180px;  /* Maintain the same height for images on mobile */
     }
 }
