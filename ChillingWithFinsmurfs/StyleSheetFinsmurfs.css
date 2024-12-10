@@ -56,10 +56,13 @@ header h2 {
 }
 
 header p {
-    color: #FFD700; /* Yellow color for header paragraph */
-    font-size: 1.2rem;
+    color: #B8860B; /* Dark Yellow font color */
+    font-size: 1.5rem;
     margin-top: 15px;
     font-family: inherit;
+    background-color: #D3D3D3; /* Light Gray background color */
+    padding: 10px; /* Space inside the box */
+    border-radius: 5px; /* Optional: Rounded corners for the box */
 }
 
 /* General Heading Styles */
