@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChillingWithFinsmurfs</title>
-      <link rel="stylesheet" href="StyleSheetFinsmurfs.css">
-    
+    <title>Contact Us | ChillingWithFinsmurfs</title>
+    <link rel="stylesheet" href="StyleSheetFinsmurfs.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
     </nav>
-</body>
-<h1>Contacts</h1>
-<body>
-    
-    <ul>
-        <li>Call us - +358441234567</li>
-        <li>Email - chillingwithfinsmurfs@gmail.com</li>
-        <li>TikTok - chillingwithfinsmurfs</li>
-        <li>YouTube - chillingwithfinsmurfs</li>
-      </ul>
- <!-- Call to Action -->
+
+    <!-- Contact Section -->
+    <h1>Contact Us</h1>
+    <section id="contact-info">
+        <ul>
+            <li><strong>Call Us:</strong> +358441234567</li>
+            <li><strong>Email:</strong> chillingwithfinsmurfs@gmail.com</li>
+            <li><strong>TikTok:</strong> @chillingwithfinsmurfs</li>
+            <li><strong>YouTube:</strong> @ChillingWithFinSmurfs</li>
+        </ul>
+    </section>
+
+    <!-- Contact Form (optional) -->
+    <section id="contact-form">
+        <h3>Get in Touch</h3>
+        <form action="submit_contact_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
+        <p>Stay connected with us on our social media!</p>
         <div class="social-links">
-            <a href="https://www.tiktok.com/@chillingwithfinsmurfs?_t=8s4dbOzC5if&_r=1" target="_blank"><img src="tiktok.jpeg" alt="TikTok"></a>
+            <a href="https://www.tiktok.com/@chillingwithfinsmurfs" target="_blank"><img src="tiktok.jpeg" alt="TikTok"></a>
             <a href="https://www.youtube.com/@ChillingWithFinSmurfs" target="_blank"><img src="yt.jpg" alt="YouTube"></a>
         </div>
     </footer>
+</body>
+</html>
 </body>
 </html>
