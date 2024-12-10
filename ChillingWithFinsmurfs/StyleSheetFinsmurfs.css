@@ -3,66 +3,67 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-image: url('IMG_0290.jpeg'); /* Replace with your image file name */
+    background-image: url('IMG_0290.jpeg'); /* Background image */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-attachment: fixed; 
     color: #333;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: #2C3E50; /* Darker shade */
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    padding: 8px 12px;
-    border-radius: 4px;
+    margin: 0 20px;
+    padding: 10px 15px;
+    border-radius: 30px; /* Rounded corners for a modern look */
+    font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    font-family: inherit; 
 }
 
 nav a:hover {
-    background-color: #575757;
+    background-color: #2980B9; /* Blue hover color */
 }
 
 /* Header Section */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
     border-radius: 8px;
     margin: 20px auto;
-    max-width: 90%; /* Adjusted for responsiveness */
+    max-width: 90%;
 }
 
 header h1 {
-    color: #003366; /* Dark blue color for header h1 */
-    font-size: 2.5rem;
+    color: #003366;
+    font-size: 3rem;
     font-family: inherit;
+    text-transform: uppercase;
 }
 
 header h2 {
-    color: #003366; /* Dark blue color for header h2 */
-    margin-top: 10px;
+    color: #2980B9;
     font-size: 1.8rem;
-    font-family: inherit;
+    margin-top: 10px;
 }
 
 header p {
     color: #B8860B; /* Dark Yellow font color */
     font-size: 1.5rem;
     margin-top: 15px;
-    font-family: inherit;
-    background-color: #D3D3D3; /* Light Gray background color */
-    padding: 10px; /* Space inside the box */
-    border-radius: 5px; /* Optional: Rounded corners for the box */
+    background-color: #D3D3D3; 
+    padding: 15px; 
+    border-radius: 8px;
+    width: 80%;
+    margin: 20px auto;
 }
 
 /* General Heading Styles */
@@ -70,7 +71,6 @@ h3, h4, h5 {
     color: #4CAF50;
     text-align: center;
     margin-top: 30px;
-    font-family: inherit;
 }
 
 /* Paragraphs */
@@ -95,29 +95,35 @@ ul li, ol li {
 /* Gallery Section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 15px;
     padding: 20px;
-    max-width: 100%;
 }
 
 .grid-item img {
     width: 100%;
-    height: 180px;  /* Adjust image height */
-    object-fit: contain; /* Ensures the entire image is visible without cutting off */
+    height: 250px;  
+    object-fit: cover;
     border-radius: 8px;
     border: 2px solid #ddd;
-    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
 }
 
 /* Footer Section */
 footer {
-    background-color: #333;
+    background-color: #2C3E50;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    font-family: inherit;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.2rem;
 }
 
 /* Social Media Links */
@@ -128,17 +134,16 @@ footer .social-links {
 footer .social-links a {
     margin: 0 20px;
     display: inline-block;
-    text-decoration: none;
 }
 
 footer .social-links img {
-    width: 60px; /* Icon size */
+    width: 60px;
     height: 60px;
     transition: transform 0.3s ease;
 }
 
 footer .social-links img:hover {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1);
 }
 
 /* Media Queries for Responsive Design */
@@ -152,11 +157,11 @@ footer .social-links img:hover {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     header h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .gallery {
@@ -164,6 +169,6 @@ footer .social-links img:hover {
     }
 
     .grid-item img {
-        height: 180px; /* Maintain the same height for images on mobile */
+        height: 180px;
     }
 }
